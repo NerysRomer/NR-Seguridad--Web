@@ -1,0 +1,157 @@
+//* Newspaper column style */
+.newspaper {
+  column-count: 3;
+}
+
+/* Responsive columns for newspaper */
+@media (max-width: 900px) {
+  .newspaper {
+    column-count: 2;
+  }
+}
+@media (max-width: 600px) {
+  .newspaper {
+    column-count: 1;
+  }
+}
+
+/* General text color utility */
+.text {
+  color: black;
+}
+
+/* Botón noticias, mejor accesibilidad y visual */
+.boton-noticias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background: blue;
+  color: aliceblue;
+  margin: 32px auto 0 auto;
+  transition: background 0.3s;
+}
+
+/* Efecto hover para botón */
+.boton-noticias:hover {
+  background-color: cornflowerblue;
+}
+
+/* Enlace dentro del botón, estilo y centrado */
+.boton-noticias a {
+  color: aliceblue;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cursor pointer para botón y enlace */
+.boton-noticias a,
+.boton-noticias {
+  cursor: pointer;
+}
+
+/* Imágenes responsivas en cards y noticias */
+.w3-card img,
+.w3-col img,
+.w3-quarter img,
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CENTRAR IMÁGENES "ABOUT" EN TODAS LAS PANTALLAS */
+.w3-quarter img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+}
+
+/* Responsive grid for team, news, pricing */
+@media (max-width: 1200px) {
+  .w3-row-padding > .w3-col,
+  .w3-row-padding > [class*="w3-col"] {
+    width: 50% !important;
+    float: left;
+  }
+}
+@media (max-width: 700px) {
+  .w3-row-padding > .w3-col,
+  .w3-row-padding > [class*="w3-col"] {
+    width: 100% !important;
+    float: none;
+  }
+  .w3-quarter {
+    width: 100% !important;
+    float: none;
+  }
+  .w3-third {
+    width: 100% !important;
+    float: none;
+  }
+  /* Centrar textos en "About" en móviles */
+  .w3-quarter p {
+    text-align: center;
+  }
+  /* --- AJUSTE SECCIÓN EQUIPO PARA QUE NO SE INTERPONGA --- */
+  #team {
+    position: static !important;
+    top: 0 !important;
+    margin-top: 32px !important;
+    padding-top: 32px !important;
+  }
+}
+
+/* Font sizes for responsive headings */
+@media (max-width: 600px) {
+  h1, .w3-jumbo { font-size: 2.2em !important; }
+  h2, .w3-xxlarge { font-size: 1.8em !important; }
+  h3, .w3-xlarge { font-size: 1.3em !important; }
+  .w3-large { font-size: 1em !important; }
+}
+
+/* Responsive padding for containers */
+@media (max-width: 600px) {
+  .w3-container {
+    padding: 32px 8px !important;
+  }
+  .w3-padding-64 {
+    padding: 32px 8px !important;
+  }
+}
+
+/* Footer responsive adjustments */
+@media (max-width: 600px) {
+  footer {
+    padding: 32px 8px !important;
+  }
+  .w3-xlarge {
+    font-size: 1.5em !important;
+  }
+}
+
+/* Responsive modal image */
+@media (max-width: 600px) {
+  #modal01 .w3-modal-content img {
+    max-width: 90vw;
+    max-height: 60vh;
+  }
+}
+
+/* Responsive logo in navbar and footer */
+@media (max-width: 600px) {
+  #myNavbar img,
+  footer img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
